@@ -1,0 +1,18 @@
+Notes for CPP:
+
+CONST:
+	variables:
+		const int* a = 5 -> cannot modify the contents(5) of this pointer(a).
+		int const* a = 5 -> same as above.
+		- So the const is before the actual pointer sign(*).
+		int* const a = 5 -> cannot reassign pointer(a) but can modify value(5).
+		- So the const is after the actual pointer sign(*).
+		const int* const a = 5 -> cannot reassign pointer(a) and cannot modify value(5).
+	
+	classes and functions:
+		int getVar(void) const -> means the class function cannot modify any of the class (read_only).
+		void setVar(int x) -> you cannot declare this class function as const because you will not be able to change value.
+		const int* const getVar(void) const -> class function returns pointer that cannot be modified and its contents cannot be
+			be modified either and the function itself will not modify any of the class.
+		
+
